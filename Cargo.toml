@@ -98,10 +98,10 @@ sp-storage = { version = "21.0.0", default-features = false }
 sc-consensus-aura = { version = "0.45.0", default-features = false }
 sc-consensus-manual-seal = { version = "0.46.0", default-features = false }
 
-# extra deps for setting up pallet-contracts
-pallet-contracts = { version = "38.0.0", default-features = false }
-pallet-insecure-randomness-collective-flip = { version = "26.0.0", default-features = false }
+# extra deps for setting up pallet-revive
 pallet-assets = { version = "40.0.0", default-features = false }
+pallet-insecure-randomness-collective-flip = { version = "26.0.0", default-features = false }
+pallet-revive = { version = "0.2.0", default-features = false }
 pallet-utility = { version = "38.0.0", default-features = false }
 
 # Polkadot

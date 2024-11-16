@@ -2,7 +2,7 @@
 name = "contracts-node"
 version.workspace = true
 authors.workspace = true
-description = "Substrate node configured for smart contracts via `pallet-contracts`."
+description = "Substrate node configured for smart contracts via `pallet-revive`."
 edition.workspace = true
 license.workspace = true
 build = "build.rs"
