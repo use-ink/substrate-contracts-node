@@ -55,6 +55,10 @@ jobs:
   build-test-linux:
     name: Build Linux
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ["macos-12"]
     timeout-minutes: 50
     needs: [set-image, fmt]
     container:
@@ -91,6 +95,10 @@ jobs:
     timeout-minutes: 50
     runs-on: macos-12
     needs: [fmt]
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ["macos-12"]
     steps:
       - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
       - name: Set rust version from env file
