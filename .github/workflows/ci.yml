@@ -55,10 +55,6 @@ jobs:
   build-test-linux:
     name: Build Linux
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        os: ["macos-12"]
     timeout-minutes: 50
     needs: [set-image, fmt]
     container:
