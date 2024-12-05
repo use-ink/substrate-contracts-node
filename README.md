@@ -3,13 +3,13 @@
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/paritytech/substrate-contracts-node)
 
 This repository contains Substrate's [`node-template`](https://github.com/paritytech/substrate/tree/master/bin/node-template)
-configured to include Substrate's [`pallet-contracts`](https://github.com/paritytech/substrate/tree/master/frame/contracts)
+configured to include Substrate's [`pallet-revive`](https://github.com/paritytech/substrate/tree/master/frame/contracts)
 ‒ a smart contract module.
 
 _This repository contains a couple of modifications that make it unsuitable
 for a production deployment, but a great fit for development and testing:_
 
-* The unstable features of the [`pallet-contracts`](https://github.com/paritytech/substrate/tree/master/frame/contracts)
+* The unstable features of the [`pallet-revive`](https://github.com/paritytech/substrate/tree/master/frame/contracts)
   are enabled by default (see the [`runtime/Cargo.toml`](https://github.com/paritytech/substrate-contracts-node/blob/main/runtime/Cargo.toml)).
 * The consensus algorithm has been switched to `manual-seal` in
   [#42](https://github.com/paritytech/substrate-contracts-node/pull/42).
@@ -93,7 +93,7 @@ We can have two types of releases:
 - [ ] Apply each commit that happened in this `solochain-template` folder since the last sync.
 - [ ] Check [`parachain-template`](https://github.com/paritytech/polkadot-sdk/tree/master/templates/parachain)
       and apply each commit that has occurred in its folder since the last sync.
-- [ ] Check commits for [`pallet-contracts`](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/contracts)
+- [ ] Check commits for [`pallet-revive`](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/revive)
       since the last time someone synchronized this repository with Substrate
       in order to not miss any important changes.
 - [ ] (Crate release only) Execute `psvm -p ./Cargo.toml -v X.X.X`, to update the dependencies to the required versions.

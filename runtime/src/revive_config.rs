@@ -4,7 +4,7 @@ use crate::{
 };
 use frame_support::{
 	parameter_types,
-	traits::{ConstBool, ConstU32},
+	traits::{ConstBool, ConstU32, ConstU64},
 };
 use frame_system::EnsureSigned;
 
@@ -49,19 +49,19 @@ impl pallet_revive::Config for Runtime {
 	type WeightPrice = pallet_transaction_payment::Pallet<Self>;
 	type WeightInfo = pallet_revive::weights::SubstrateWeight<Self>;
 	type ChainExtension = ();
-	type AddressGenerator = pallet_revive::DefaultAddressGenerator;
-	type MaxCodeLen = ConstU32<{ 123 * 1024 }>;
+	type AddressMapper = pallet_revive::AccountId32Mapper<Self>;
 	type RuntimeMemory = ConstU32<{ 128 * 1024 * 1024 }>;
 	type PVFMemory = ConstU32<{ 512 * 1024 * 1024 }>;
 	type UnsafeUnstableInterface = ConstBool<true>;
 	type CodeHashLockupDepositPercent = CodeHashLockupDepositPercent;
 	type RuntimeHoldReason = RuntimeHoldReason;
 	type Debug = ();
-	type Migrations = ();
 	#[cfg(feature = "parachain")]
 	type Xcm = pallet_xcm::Pallet<Self>;
 	#[cfg(not(feature = "parachain"))]
 	type Xcm = ();
 	type UploadOrigin = EnsureSigned<Self::AccountId>;
 	type InstantiateOrigin = EnsureSigned<Self::AccountId>;
+	type ChainId = ConstU64<420_420_420>;
+	type NativeToEthRatio = ConstU32<1_000_000>; // 10^(18 - 12) Eth is 10^18, Native is 10^12.
 }
