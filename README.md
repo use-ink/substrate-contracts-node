@@ -3,7 +3,7 @@
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/paritytech/substrate-contracts-node)
 
 This repository contains Substrate's [`node-template`](https://github.com/paritytech/substrate/tree/master/bin/node-template)
-configured to include Substrate's [`pallet-revive`](https://github.com/paritytech/substrate/tree/master/frame/contracts)
+configured to include Substrate's [`pallet-revive`](https://github.com/paritytech/substrate/tree/master/frame/revive)
 ‒ a smart contract module.
 
 _This repository contains a couple of modifications that make it unsuitable
@@ -29,7 +29,7 @@ for a production deployment, but a great fit for development and testing:_
 * _With each start of the node process the chain starts from genesis ‒ so no
   chain state is retained, all contracts will be lost! If you want to retain
   chain state you have to supply a `--base-path`._
-* For `pallet_contracts::Config` we increased the allowed contract sizes. This
+* For `pallet_revive::Config` we increased the allowed contract sizes. This
   avoids running into `CodeTooLarge` when uploading contracts during development.
   See the comment in [`runtime/src/lib.rs`](https://github.com/paritytech/substrate-contracts-node/blob/main/runtime/src/lib.rs)
   for more details.
