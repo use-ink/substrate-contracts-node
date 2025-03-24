@@ -1,5 +1,15 @@
 # substrate-contracts-node
 
+> [!IMPORTANT]
+> 
+> ### Archive Notice
+>
+> This repository has been archived and is no longer actively maintained. The contents have been moved to a new repository within [`use-ink`](https://github.com/use-ink) under the name [`ink-node`](https://github.com/use-ink/ink-node).
+> 
+> For the latest version and ongoing updates, please visit the new repository here: [`ink-node`](https://github.com/use-ink/ink-node).
+> 
+> Thank you for your understanding!
+
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/paritytech/substrate-contracts-node)
 
 This repository contains Substrate's [`node-template`](https://github.com/paritytech/substrate/tree/master/bin/node-template)
